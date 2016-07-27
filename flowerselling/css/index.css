@@ -1,0 +1,144 @@
+body {
+	font-family: "Hiragino Sans GB", "Microsoft YaHei",
+             "WenQuanYi Micro Hei", sans-serif;
+}
+.container {
+	padding: 0px;
+}
+
+#head {
+	height: 170px;
+	background: #ffffff url("../images/header_bg.png") top center no-repeat;
+	background-clip: padding-box;
+	background-size: 100% auto;
+	position: relative;
+}
+
+#head_text {
+	background-color: rgba(255,255,255,0.89);
+	height: 140px;
+	width: 80%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#head_text_text {
+	height: 120px;
+	width: 90%;
+	margin-top: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#head_text_title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#hot_text {
+	color: red;
+	font-size: 16px;
+}
+
+#ad_text {
+	text-align: center;
+	padding-top: 5px;
+}
+
+#ad_img {
+	width: 100%;
+}
+
+#gift_text {
+	width: 20%;
+	text-align: center;
+	margin: 10px auto; 
+	/* 赠品介绍: */
+	border: 1px solid #DA7A7A;
+	font-family: PingFangSC-Regular;
+	font-size: 17px;
+	color: #000000;
+	letter-spacing: -0.36px;
+	/* Rectangle 2: */
+	border: 1px solid #979797;
+}
+
+.flower_list {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.flower_item:last-child {
+	padding-right: 5px;
+} 
+
+.flower_item {
+	width: 150px;
+	padding-left: 5px;
+}
+
+.flower_item img{
+	width: 150px;
+}
+
+.flower_item_intro {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.flower_list > div {
+	display: table-cell;
+}
+
+#step_text {
+	font-size: 16px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#seat_number {
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+    line-height: 18px;
+    height: 50px;
+    text-align: center;
+}
+
+#submit_btn{
+	/* Rectangle 7: */
+	background: #6C4522;
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+	border-radius: 8px;
+	/* 快把花送到我的座位上！: */
+	font-family: PingFangSC-Semibold;
+	font-size: 18px;
+	color: #DADADA;
+	letter-spacing: -0.44px;
+
+	width: 80%;
+	margin-bottom: 30px;
+}
+
+hr.style14 { 
+  border: 0; 
+  height: 1px; 
+  width: 60%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.frame { width: 100%; height: 160px; padding: 0; }
+.frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
+.frame .slidee li { float: left; margin: 0 5px 0 0; padding: 0; width: 120px; height: 100%; }
+
