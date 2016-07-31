@@ -147,6 +147,10 @@ body {
 	margin-bottom: 30px;
 }
 
+#aboutus {
+	text-align: center;
+}
+
 #loading{
     opacity:0.8;
     background-color:#ffffff;
