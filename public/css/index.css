@@ -16,6 +16,42 @@ body {
 	padding: 0px;
 }
 
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+
+}
+.flex-center p {
+  margin: 0;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2.2vh;
+  padding-right: 2.2vh;
+  background-color: rgba(255,255,255,0.9);
+}
+
+#head_title {
+	font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+#header {
+	height: 30vh;
+	background: #ffffff url("../images/header_bg.png") center center no-repeat;
+	background-clip: padding-box;
+	background-size: cover;
+	position: relative;
+	padding-top: 2.2vh;
+    padding-bottom: 2.2vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+
+}
+
 #head {
 	height: 28vh;
 	background: #ffffff url("../images/header_bg.png") center center no-repeat;
@@ -122,7 +158,7 @@ body {
 	padding-bottom: 5px;
 }
 
-#seat_number {
+#seat_number, #phone_number{
 	width: 80%;
 	margin: auto;
 	margin-top: 10px;
@@ -131,6 +167,10 @@ body {
     line-height: 18px;
     height: 50px;
     text-align: center;
+}
+
+#hint {
+	font-size: 0.8em;
 }
 
 #submit_btn{
@@ -151,8 +191,8 @@ body {
 	text-align: center;
 }
 
-#loading{
-    opacity:0.8;
+#loading, #order_success{
+    opacity:0.9;
     background-color:#ffffff;
     position:fixed;
     width:100%;
@@ -160,6 +200,19 @@ body {
     top:0px;
     left:0px;
     z-index:1000;
+}
+
+#order_success {
+	display: table;
+}
+
+#order_success p {
+  display: table-cell;
+  margin: 0;
+  padding: 20px;
+  border: 10px solid white;
+  vertical-align: middle;
+  font-size: 1.2em;
 }
 
 hr.style14 { 

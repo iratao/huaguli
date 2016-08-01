@@ -29,6 +29,7 @@ $(function() {
     function submitSuccess(data) {
         $('#loading').addClass('invisible');
         console.log("submit success");
+        $('#order_success').removeClass('invisible');
     }
 
     function submitError(xhr, status, error) {
