@@ -191,7 +191,7 @@ body {
 	text-align: center;
 }
 
-#loading, #order_success{
+#loading, #order_success, #order_fail{
     opacity:0.9;
     background-color:#ffffff;
     position:fixed;
@@ -202,17 +202,27 @@ body {
     z-index:1000;
 }
 
-#order_success {
+#order_success, #order_fail {
 	display: table;
 }
 
-#order_success p {
+#order_success p, #order_fail p {
   display: table-cell;
   margin: 0;
   padding: 20px;
   border: 10px solid white;
   vertical-align: middle;
   font-size: 1.2em;
+}
+
+#success_ok, #fail_ok {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+#success_ok_btn, #fail_ok_btn {
+	width: 80%;
+	margin-bottom: 10px;
 }
 
 hr.style14 { 
