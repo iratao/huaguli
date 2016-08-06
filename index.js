@@ -4,6 +4,8 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 var bodyParser  = require('body-parser');
 var path = require('path');
+var fs = require('fs');
+
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -47,6 +49,32 @@ router.route('/api/sendmail')
 		        res.json({yo: info.response});
 		    };
 		});
+	});
+
+var value = require('./items.json')
+
+router.route('/api/item/:item_id/issoldout/:soldout')
+	.put(function(req, res) {
+		var itemid = req.params.item_id;
+		var isSoldOut = req.params.soldout;
+		value.items[itemid] = isSoldOut > 0 ? true: false;
+
+		fs.writeFile("./items.json", JSON.stringify(value, null, 4), function(err) {
+			res.setHeader('Content-Type', 'application/json');
+		    if(err) {
+		    	console.log(err);
+		        res.send({success: false});
+		    }
+	    	res.send({success: true});
+		}); 
+
+		
+	});
+
+router.route('/api/getlist')
+	.get(function(req, res) {
+		res.setHeader('Content-Type', 'application/json');
+    	res.send(JSON.stringify(value));
 	});
 
 

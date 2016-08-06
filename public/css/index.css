@@ -116,21 +116,46 @@ body {
 	border: 1px solid #979797;
 }
 
-.flower_list {
+.gift_list > div {
+	display: table-cell;
+}
+
+
+.flower_list, .gift_list {
 	width: 100%;
 	overflow-x: auto;
 }
 
-/*.flower_item:last-child {
-	padding-right: 5px;
-}*/ 
+.gift_list {
+	border-spacing: 3px;
+}
 
-.flower_item {
-	width: 150px;
+.sold_out {
+	float: left;
+	color: #ff5858;
+    font-weight: 600;
+}
+
+.flower_item.is_sold_out {
+	background-color: #c7c7c7;
+}
+
+.flower_item{
 	background-color: #f9f9f9;
 	border-radius: 6px;
 	background-clip: content-box;
 	border: 1px solid #fff;
+}
+
+.gift_item {
+	background-color: #f9f9f9;
+	border-radius: 6px;
+	background-clip: content-box;
+	border: 1px solid #a7a7a7;
+}
+
+.gift_item img{
+	width: 260px;
 }
 
 .flower_item.active {
@@ -139,12 +164,13 @@ body {
 }
 
 .flower_item img{
-	width: 150px;
+	width: 180px;
 }
 
 .flower_item_intro {
 	margin-top: 5px;
 	text-align: center;
+    height: 20vh;
 }
 
 .flower_list > div {

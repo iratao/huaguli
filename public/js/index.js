@@ -1,6 +1,9 @@
 $(function() {
 	var activeItem = undefined;
     $(".flower_item").click(function(event){
+        if ($(this).hasClass('is_sold_out')) {
+            return;
+        }
     	if (activeItem) {
     		activeItem.removeClass("active");
     	}
@@ -46,6 +49,30 @@ $(function() {
     $("#fail_ok_btn").click(function(){
         $('#order_fail').addClass('invisible');
     });
+
+    $.ajax({
+        type: 'GET',
+        url: '/api/getlist',
+        success: getListSuccess,
+        error: getListError,
+    }); 
+
+    function getListSuccess(data) {
+        if (!data || data.length == 0) {
+            return;
+        }
+        var items = data.items;
+        Object.keys(items).forEach(function(key) {
+            if (items[key]) { // sold out
+                $('#' + key + ' .sold_out').removeClass('invisible');
+                $('#' + key).addClass('is_sold_out');
+            }
+        });
+    }
+
+    function getListError(xhr, status, error){
+        console.log('get list error');
+    }
 
     function submitSuccess(data) {
         $('#loading').addClass('invisible');
