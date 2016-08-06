@@ -16,15 +16,18 @@ $(function() {
     	var seatNum = $("#seat_number").val();
         var phoneNum = $("#phone_number").val();
         if (!selectedItem) {
-            alert('please select an item');
+            $('#selectItemModel').modal('toggle');
+            // alert('请选择一束花');
             return;
         }
         if (!seatNum) {
-            alert('please give your seat number');
+            $('#inputSeatNumModel').modal('toggle');
+            // alert('请输入座位号');
             return;
         }
         if (!phoneNum) {
-            alert('please give your phone number');
+            $('#inputPhoneNumModel').modal('toggle');
+            // alert('请输入手机号');
             return;
         }
         $('#loading').removeClass('invisible');
