@@ -11,6 +11,10 @@ $(function() {
     	activeItem = $(this);
     });
 
+    $("#wechatLink").click(function(event) {
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+    })
+
     $("#submit_btn").click(function(event) {
     	var selectedItem = $(".flower_item.active").attr("data-value");
     	var seatNum = $("#seat_number").val();
