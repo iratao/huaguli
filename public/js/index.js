@@ -29,11 +29,11 @@ $(function() {
             // alert('请输入座位号');
             return;
         }
-        if (!phoneNum) {
-            $('#inputPhoneNumModel').modal('toggle');
-            // alert('请输入手机号');
-            return;
-        }
+        // if (!phoneNum) {
+        //     $('#inputPhoneNumModel').modal('toggle');
+        //     // alert('请输入手机号');
+        //     return;
+        // }
         $('#loading').removeClass('invisible');
     	$.ajax({
             type: 'POST',
